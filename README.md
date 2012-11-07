@@ -1,11 +1,9 @@
-Downloading videos from confreaks has never been so easy
+Downloading all the download all software screencasts
 --------------------------------------------------------
 
-Usage: ruby confreaks-dl.rb <confname>
+Usage: ruby das-dl.rb
 
-example
--------
-http://confreaks.com/events/larubyconf2012 > ruby confreaks-dl.rb larubyconf2012
+You will be prompted for email and password
 
 dependencies
 ------------
