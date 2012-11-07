@@ -24,12 +24,12 @@ page = form.submit form.buttons.first
 temp_file = Tempfile.new('random')
 cookie = ''
 doc = Nokogiri::HTML(open("https://www.destroyallsoftware.com/screencasts/catalog", "Cookie" => cookie))
-`mkdir -p ~/Movies/screencasts/DAS/`
+`mkdir -p #{ENV['HOME']}/Movies/screencasts/DAS/`
 doc.css('a[href$="ios"]').map{ |a| a['href'] }.uniq.each do |link|
   link = "http://www.destroyallsoftware.com#{link}"
   puts link
   agent.pluggable_parser.default = Mechanize::Download
   puts "Downloading : #{link}"
   file_name = /(.*)\/(.*)\/download_ios/.match(link)[2]
-  puts agent.get(link).save("~/Movies/screencasts/DAS/#{file_name}.mp4")
+  puts agent.get(link).save("#{ENV['HOME']}/Movies/screencasts/DAS/#{file_name}.mp4")
 end
