@@ -1,4 +1,4 @@
-Downloading all the download all software screencasts
+Downloading all the destroy all software screencasts
 --------------------------------------------------------
 
 Usage: ruby das-dl.rb
